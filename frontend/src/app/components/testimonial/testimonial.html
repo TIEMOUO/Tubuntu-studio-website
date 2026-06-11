@@ -1,0 +1,75 @@
+<section id="testimonials" class="testimonials-section">
+
+  <div class="container">
+
+    <div class="section-header text-center">
+
+      <span class="section-badge">
+        TÉMOIGNAGES
+      </span>
+
+      <h2>
+        Ce que nos clients disent
+        <span>de nous</span>
+      </h2>
+
+      <p>
+        La satisfaction de nos clients est au cœur
+        de chacune de nos réalisations.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      @for(testimonial of testimonials; track testimonial.name){
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="testimonial-card">
+
+          <div class="client-image">
+
+            <img
+              [src]="testimonial.image"
+              [alt]="testimonial.name">
+
+            <div class="image-overlay"></div>
+
+          </div>
+
+          <div class="testimonial-content">
+
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+
+            <p class="testimonial-message">
+              {{ testimonial.message }}
+            </p>
+
+            <div class="client-info">
+
+              <h4>
+                {{ testimonial.name }}
+              </h4>
+
+              <span>
+                {{ testimonial.role }}
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

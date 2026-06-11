@@ -1,0 +1,49 @@
+<section id="process" class="process-section">
+
+  <div class="container">
+
+    <div class="section-header text-center">
+
+      <span class="section-badge">
+        NOTRE PROCESSUS
+      </span>
+
+      <h2>
+        Une méthode simple pour des
+        <span>résultats exceptionnels</span>
+      </h2>
+
+      <p>
+        Nous suivons un processus structuré afin de garantir
+        une expérience fluide et des livrables de qualité.
+      </p>
+
+    </div>
+
+    <div class="process-timeline">
+
+      @for(step of steps; track step.number){
+
+      <div class="process-card">
+
+        <div class="step-number">
+          {{ step.number }}
+        </div>
+
+        <h3>
+          {{ step.title }}
+        </h3>
+
+        <p>
+          {{ step.description }}
+        </p>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,29 @@
+<nav class="tubuntu-nav" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <a class="nav-logo" (click)="scrollTo('#home')">
+      <span class="logo-text">TUBUNTU</span>
+      <span class="logo-accent">STUDIO</span>
+    </a>
+
+    <ul class="nav-links" [class.open]="isMenuOpen">
+      @for (link of navLinks; track link.label) {
+        <li>
+          <a (click)="scrollTo(link.href)" class="nav-link">{{ link.label }}</a>
+        </li>
+      }
+      <li class="nav-cta-mobile">
+        <a (click)="scrollTo('#contact')" class="btn-gold">  Demander un devis</a>
+      </li>
+    </ul>
+
+    <div class="nav-right">
+      <a (click)="scrollTo('#contact')" class="btn-gold nav-cta">  Demander un devis</a>
+      <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-overlay" [class.active]="isMenuOpen" (click)="closeMenu()"></div>
+

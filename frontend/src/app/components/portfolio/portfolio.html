@@ -1,0 +1,81 @@
+<section id="portfolio" class="portfolio-section">
+
+  <div class="container">
+
+    <div class="section-header text-center">
+
+      <span class="section-badge">
+        NOS RÉALISATIONS
+      </span>
+
+      <h2>
+        Des projets qui parlent
+        <span>d'eux-mêmes</span>
+      </h2>
+
+      <p>
+        Découvrez une sélection de nos réalisations
+        en photographie, vidéo, design graphique et
+        communication visuelle.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      @for(project of projects; track project.title){
+
+      <div class="col-lg-4 col-md-6">
+
+        <div
+          class="portfolio-card"
+          (click)="openProject(project.driveUrl)">
+
+          <img
+            [src]="project.image"
+            [alt]="project.title">
+
+          <div class="portfolio-overlay">
+
+            <span class="category">
+              {{ project.category }}
+            </span>
+
+            <h3>
+              {{ project.title }}
+            </h3>
+
+            <div class="view-project">
+
+              <span>Voir le projet</span>
+
+              <i class="fas fa-arrow-right"></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      }
+
+    </div>
+
+    <div class="portfolio-footer">
+
+      <a
+        href="https://drive.google.com/"
+        target="_blank"
+        class="btn-gold">
+
+        Voir le portfolio complet
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
