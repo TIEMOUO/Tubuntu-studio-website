@@ -1,0 +1,28 @@
+:root {
+  --primary-color: #d4af37;
+  --accent-gold: #d4af37;
+
+  --background-color: #0a0a0a;
+  --bg-secondary: #161616;
+
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255,255,255,0.7);
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --transition: all .3s ease;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}

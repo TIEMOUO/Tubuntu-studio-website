@@ -1,0 +1,68 @@
+<section id="home" class="hero-section">
+
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="hero-video">
+
+    <!-- <source
+      src="assets/videos/tubuntu-showreel.mp4"
+      type="video/mp4"> -->
+
+  </video>
+
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="row align-items-center min-vh-100">
+
+      <!-- LEFT -->
+      <div class="col-lg-7">
+        <div class="hero-text">
+          <span class="hero-badge">
+             Studio Audiovisuel Créatif
+          </span>
+          <h2>
+            Donnez vie à votre
+            <span>image de marque</span>
+          </h2>
+          <p class="hero-description">
+           Tubuntu Studio accompagne les entreprises,
+          marques et particuliers dans la création
+          de contenus visuels mémorables à travers
+          la photographie, la vidéo, le design
+          et la couverture événementielle.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn-gold">
+              Voir nos réalisations
+            </a>
+            <a href="#contact" class="btn-outline">
+              Demander un devis
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+
+  <div class="col-lg-5 d-none d-lg-flex">
+    <div class="services-showcase">
+      @for(service of displayServices; track service; let i = $index){
+        <div
+          class="service-line"
+          [class.active]="i === 2">
+
+          @if(i === 2){
+            <i class = "fas fa-play"></i>
+          }
+          {{ service }}
+     </div>
+      }
+    </div>
+</div>
+</div>
+</div>
+</section>

@@ -1,0 +1,87 @@
+<section id="contact" class="contact-section">
+
+  <div class="container">
+
+    <div class="section-header text-center">
+
+      <span class="section-badge">
+        CONTACT
+      </span>
+
+      <h2>
+        Parlons de votre
+        <span>prochain projet</span>
+      </h2>
+
+      <p>
+        Une idée, un projet ou une collaboration ?
+        Nous vous répondons rapidement.
+      </p>
+
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- FORMULAIRE -->
+      <div class="contact-form">
+
+        <div class="form-group">
+          <input type="text" placeholder="Nom complet" [(ngModel)]="form.name">
+        </div>
+
+        <div class="form-group">
+          <input type="email" placeholder="Adresse email" [(ngModel)]="form.email">
+        </div>
+
+        <div class="form-group">
+          <input type="text" placeholder="Sujet" [(ngModel)]="form.subject">
+        </div>
+
+        <div class="form-group">
+          <textarea rows="6" placeholder="Votre message" [(ngModel)]="form.message"></textarea>
+        </div>
+
+        <button class="btn primary"  type = "submit">
+          Envoyer le message
+        </button>
+
+      </div>
+
+      <!-- INFOS CONTACT -->
+      <div class="contact-info">
+
+        <div class="info-card">
+
+          <h3>Coordonnées</h3>
+
+          <p>
+            📧 {{ contactInfo.email }}
+          </p>
+
+          <p>
+            📞 {{ contactInfo.phone }}
+          </p>
+
+          <p>
+            📍 {{ contactInfo.location }}
+          </p>
+
+        </div>
+
+        <div class="info-card highlight">
+
+          <h3>Temps de réponse</h3>
+
+          <p>
+            Nous répondons généralement sous 24h.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

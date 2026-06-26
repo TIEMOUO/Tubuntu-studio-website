@@ -1,0 +1,67 @@
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- BRAND -->
+      <div class="footer-brand">
+
+        <h2>
+          {{ brand.name }}
+        </h2>
+
+        <p>
+          {{ brand.tagline }}
+        </p>
+
+      </div>
+
+      <!-- NAVIGATION -->
+      <div class="footer-links">
+
+        <h3>Navigation</h3>
+
+        <ul>
+          @for(link of links; track link.label){
+            <li>
+              <a [href]="link.target">
+                {{ link.label }}
+              </a>
+            </li>
+          }
+        </ul>
+
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-social">
+
+        <h3>Réseaux</h3>
+
+        <ul>
+          @for(item of social; track item.label){
+            <li>
+              <a [href]="item.url" target="_blank">
+                {{ item.label }}
+              </a>
+            </li>
+          }
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+
+      <p>
+        © {{ year }} {{ brand.name }} — Tous droits réservés.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
