@@ -22,9 +22,9 @@
 
     <div class="process-timeline">
 
-      @for(step of steps; track step.number){
+      @for(step of steps; track step.number; let i = $index){
 
-      <div class="process-card">
+      <div class="process-card" data-aos="fade-up" [attr.data-aos-delay]="i * 150">
 
         <div class="step-number">
           {{ step.number }}

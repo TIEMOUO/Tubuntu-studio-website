@@ -1,29 +1,15 @@
 <section id="contact" class="contact-section">
-
   <div class="container">
 
     <div class="section-header text-center">
-
-      <span class="section-badge">
-        CONTACT
-      </span>
-
-      <h2>
-        Parlons de votre
-        <span>prochain projet</span>
-      </h2>
-
-      <p>
-        Une idée, un projet ou une collaboration ?
-        Nous vous répondons rapidement.
-      </p>
-
+      <span class="section-badge">CONTACT</span>
+      <h2>Parlons de votre <span>prochain projet</span></h2>
+      <p>Une idée, un projet ou une collaboration ? Écrivez-nous sur WhatsApp.</p>
     </div>
 
     <div class="contact-grid">
-
-      <!-- FORMULAIRE -->
-      <div class="contact-form">
+      <!-- FORMULAIRE REDIRIGEANT VERS WHATSAPP -->
+      <div class="contact-form" data-aos="fade-right" data-aos-delay="100">
 
         <div class="form-group">
           <input type="text" placeholder="Nom complet" [(ngModel)]="form.name">
@@ -38,50 +24,31 @@
         </div>
 
         <div class="form-group">
-          <textarea rows="6" placeholder="Votre message" [(ngModel)]="form.message"></textarea>
+          <textarea rows="5" placeholder="Votre message" [(ngModel)]="form.message"></textarea>
         </div>
 
-        <button class="btn primary"  type = "submit">
-          Envoyer le message
+        <button class="btn-gold-whatsapp" (click)="sendViaWhatsApp()">
+          <i class="fa-brands fa-whatsapp"></i> Discuter sur WhatsApp
         </button>
 
       </div>
 
       <!-- INFOS CONTACT -->
-      <div class="contact-info">
-
+      <div class="contact-info" data-aos="fade-left" data-aos-delay="200">
         <div class="info-card">
-
           <h3>Coordonnées</h3>
-
-          <p>
-            📧 {{ contactInfo.email }}
-          </p>
-
-          <p>
-            📞 {{ contactInfo.phone }}
-          </p>
-
-          <p>
-            📍 {{ contactInfo.location }}
-          </p>
-
+          <p>📧 {{ contactInfo.email }}</p>
+          <p>📞 {{ contactInfo.phone }}</p>
+          <p>📍 {{ contactInfo.location }}</p>
         </div>
 
         <div class="info-card highlight">
-
           <h3>Temps de réponse</h3>
-
-          <p>
-            Nous répondons généralement sous 24h.
-          </p>
-
+          <p>Réponse instantanée via WhatsApp ou sous 24h par email.</p>
         </div>
-
       </div>
 
     </div>
 
   </div>
-
 </section>

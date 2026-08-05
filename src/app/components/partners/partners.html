@@ -1,0 +1,31 @@
+<section id="partners" class="partners-section">
+
+  <div class="container">
+
+    <div class="section-header text-center">
+
+      <span class="section-badge">
+        ILS NOUS FONT CONFIANCE
+      </span>
+
+      <h2>
+        Nos partenaires
+        <span>de confiance</span>
+      </h2>
+
+    </div>
+
+    <div class="partners-grid" data-aos="fade-up" data-aos-delay="100">
+      @for(partner of partners; track partner.name; let i = $index){
+        <div class="partner-card" data-aos="zoom-in" [attr.data-aos-delay]="i * 50">
+          <img
+            [src]="partner.logo"
+            [alt]="partner.name"
+            class="partner-logo">
+        </div>
+      }
+    </div>
+
+  </div>
+
+</section>

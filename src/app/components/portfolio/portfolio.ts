@@ -1,52 +1,63 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+interface Stat {
+  icon: string;
+  value: string;
+  label: string;
+}
+
+interface SubPortfolio {
+  icon: string;
+  title: string;
+  subtitle: string;
+  driveUrl: string;
+}
 
 @Component({
   selector: 'app-portfolio',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './portfolio.html',
-  styleUrl: './portfolio.scss',
+  styleUrls: ['./portfolio.scss'],
 })
 export class Portfolio {
-  projects = [
+  
+  // Lien vers le portfolio principal sur Google Drive
+  mainDriveUrl = 'https://zesubtilizer.pixieset.com/vitrinestudio/';
+
+  // Données des statistiques
+  stats: Stat[] = [
     {
-      title: 'Couverture Événementielle',
-      category: 'Événement',
-      image: 'assets/images/event.jpg',
-      driveUrl: 'https://drive.google.com/'
+      icon: 'fas fa-camera',
+      value: '+300',
+      label: 'Projets réalisés'
     },
     {
-      title: 'Photographie Corporate',
-      category: 'Photographie',
-      image: 'assets/images/corporate.jpg',
-      driveUrl: 'https://drive.google.com/'
+      icon: 'fas fa-users',
+      value: '+100',
+      label: 'Clients satisfaits'
     },
     {
-      title: 'Production Vidéo',
-      category: 'Vidéo',
-      image: 'assets/images/studio.jpg',
-      driveUrl: 'https://drive.google.com/'
-    },
-    {
-      title: 'Branding & Design',
-      category: 'Design',
-      image: 'assets/images/brand.jpg',
-      driveUrl: 'https://drive.google.com/'
-    },
-    {
-      title: 'Création de Contenu',
-      category: 'Social Media',
-      image: 'assets/images/content.jpg',
-      driveUrl: 'https://drive.google.com/'
-    },
-    {
-      title: 'Projet Commercial',
-      category: 'Publicité',
-      image: 'assets/images/commercial.jpg',
-      driveUrl: 'https://drive.google.com/'
+      icon: 'fas fa-star',
+      value: '+10',
+      label: "Années d'expérience"
     }
   ];
 
-  openProject(url: string): void {
-    window.open(url, '_blank');
-  }
+  // Données des deux sous-portfolios du bas
+  subPortfolios: SubPortfolio[] = [
+    {
+      icon: 'fas fa-camera',
+      title: 'Studio Portfolio',
+      subtitle: 'Voir toutes nos photos',
+      driveUrl: 'https://zesubtilizer.pixieset.com/vitrinestudio/'
+    },
+    {
+      icon: 'fas fa-film',
+      title: 'Set Management Portfolio',
+      subtitle: 'Voir toutes nos réalisations',
+      driveUrl: 'https://tubuntustudio93.pixieset.com/tubuntustudiosetmanagement/'
+    }
+  ];
 }
