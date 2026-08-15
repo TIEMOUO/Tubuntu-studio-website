@@ -77,8 +77,8 @@
   background:
   linear-gradient(
     135deg,
-    #d4af37,
-    #f4d03f
+    #ff9500,
+    #ffb347
   );
 
   color: #000;
@@ -95,7 +95,7 @@
   transition: all .4s ease;
 
   box-shadow:
-    0 8px 20px rgba(212,175,55,.35);
+    0 8px 20px rgba(255,149,0,.35);
 }
 
 .scroll-top-btn.show {
@@ -111,5 +111,5 @@
   transform: translateY(-4px);
 
   box-shadow:
-    0 12px 25px rgba(212,175,55,.5);
+    0 12px 25px rgba(255,149,0,.5);
 }

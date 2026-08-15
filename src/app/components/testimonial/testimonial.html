@@ -22,9 +22,9 @@
 
     <div class="row g-4">
 
-      @for(testimonial of testimonials; track testimonial.name){
+      @for(testimonial of testimonials; track testimonial.name; let i = $index){
 
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" [attr.data-aos-delay]="i * 100">
 
         <div class="testimonial-card">
 

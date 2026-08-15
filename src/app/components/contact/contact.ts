@@ -1,17 +1,22 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
-import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
-  imports: [
-    CommonModule,
-    FormsModule,
-  ],
+  imports: [FormsModule],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss',
+  styleUrls: ['./contact.scss'],
 })
 export class Contact {
+  // Numéro WhatsApp au format international (sans le +)
+  whatsappNumber = '237699099784'; 
+
+  contactInfo = {
+    email: 'contact@tubsstudio.com',
+    phone: '237699099784',
+    location: 'Douala, Cameroun'
+  };
+
   form = {
     name: '',
     email: '',
@@ -19,14 +24,18 @@ export class Contact {
     message: ''
   };
 
-  contactInfo = {
-    email: 'contact@tubuntustudio.com',
-    phone: '+237 6XX XXX XXX',
-    location: 'Douala, Cameroun'
-  };
+  sendViaWhatsApp() {
+    if (!this.form.name || !this.form.message) {
+      alert('Veuillez remplir au moins votre nom et votre message.');
+      return;
+    }
 
-  // submitForm() {
-  //   console.log('Form submitted', this.form);
-  //   // Ici tu brancheras ton API (EmailJS / backend / Firebase etc.)
-  // }
+    const text = `Bonjour, je m'appelle *${this.form.name}*.\n` +
+                 `Email: ${this.form.email || 'Non renseigné'}\n` +
+                 `Sujet: ${this.form.subject || 'Demande de projet'}\n\n` +
+                 `*Message:* ${this.form.message}`;
+
+    const url = `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  }
 }

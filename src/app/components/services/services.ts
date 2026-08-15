@@ -10,38 +10,24 @@ export class Services {
 
   services = [
     {
-      title: 'Photographie Professionnelle',
+      title: 'Photography Professional',
       icon: 'fas fa-camera',
-      description: 'Portraits, événements, produits, immobilier et photographie corporate.'
+      description: 'Shooting photo, couverture photo d\'événement, shooting produits, shooting corporate.'
     },
     {
-      title: 'Production Vidéo',
+      title: 'Production vidéo',
       icon: 'fas fa-video',
-      description: 'Spots publicitaires, vidéos institutionnelles, clips et documentaires.'
+      description: 'Film événementiel.'
     },
-
     {
-      title: 'Design Graphique',
-      icon: 'fas fa-pen-ruler',
-      description: 'Flyers, affiches, identité visuelle, branding et supports marketing.'
-    },
-
-    {
-      title: 'Couverture Événementielle',
+      title: 'Couverture événementielle',
       icon: 'fas fa-calendar-check',
-      description: 'Captation photo et vidéo pour mariages, conférences et événements.'
+      description: 'Concert, listening parties.'
     },
-
     {
-      title: 'Création de Contenus',
-      icon: 'fas fa-mobile-screen-button',
-      description: 'Reels, TikTok, réseaux sociaux et contenus engageants pour les marques.'
-    },
-
-    {
-      title: 'Communication Visuelle',
+      title: 'Communication visuelle',
       icon: 'fas fa-bullhorn',
-      description: 'Stratégie visuelle et accompagnement pour développer votre image.'
+      description: 'Personal branding.'
     }
   ];
 }

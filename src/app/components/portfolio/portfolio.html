@@ -1,81 +1,57 @@
 <section id="portfolio" class="portfolio-section">
-
   <div class="container">
-
+    
+    <!-- En-tête -->
     <div class="section-header text-center">
-
-      <span class="section-badge">
-        NOS RÉALISATIONS
-      </span>
-
+      <span class="section-badge">NOS RÉALISATIONS</span>
       <h2>
-        Des projets qui parlent
-        <span>d'eux-mêmes</span>
+        Les images <span>parlent mieux</span><br>que les mots.
       </h2>
-
-      <p>
-        Découvrez une sélection de nos réalisations
-        en photographie, vidéo, design graphique et
-        communication visuelle.
-      </p>
-
     </div>
 
-    <div class="row g-4">
-
-      @for(project of projects; track project.title){
-
-      <div class="col-lg-4 col-md-6">
-
-        <div
-          class="portfolio-card"
-          (click)="openProject(project.driveUrl)">
-
-          <img
-            [src]="project.image"
-            [alt]="project.title">
-
-          <div class="portfolio-overlay">
-
-            <span class="category">
-              {{ project.category }}
-            </span>
-
-            <h3>
-              {{ project.title }}
-            </h3>
-
-            <div class="view-project">
-
-              <span>Voir le projet</span>
-
-              <i class="fas fa-arrow-right"></i>
-
-            </div>
-
+    <!-- Statistiques / Chiffres clés -->
+    <div class="stats-grid">
+      @for(stat of stats; track stat.label) {
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i [class]="stat.icon"></i>
           </div>
-
+          <div class="stat-info">
+            <span class="stat-number">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
         </div>
-
-      </div>
-
       }
-
     </div>
 
-    <div class="portfolio-footer">
+    <!-- Carte principale (Hero Banner) -->
+    <div class="main-portfolio-card">
+      <div class="card-bg-image" style="background-image: url('assets/images/portfolio.jpg');"></div>
+      <div class="card-overlay"></div>
+      <div class="card-content">
+        <h1>Portfolio <br><span class="highlight">Tubuntu</span> Studio</h1>
+        <p>Découvrez l'ensemble de nos shootings,<br>productions vidéo et réalisations.</p>
+        <a [href]="mainDriveUrl" target="_blank" class="btn-outline-gold">
+          EXPLORER LE PORTFOLIO <i class="fas fa-arrow-up-right-from-square ms-2"></i>
+        </a>
+      </div>
+    </div>
 
-      <a
-        href="https://drive.google.com/"
-        target="_blank"
-        class="btn-gold">
-
-        Voir le portfolio complet
-
-      </a>
-
+    <!-- Cartes secondaires (Sub-portfolios) -->
+    <div class="sub-portfolio-grid">
+      @for(sub of subPortfolios; track sub.title) {
+        <a [href]="sub.driveUrl" target="_blank" class="sub-card">
+          <div class="sub-icon">
+            <i [class]="sub.icon"></i>
+          </div>
+          <div class="sub-info">
+            <h3>{{ sub.title }}</h3>
+            <p>{{ sub.subtitle }}</p>
+          </div>
+          <i class="fas fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+      }
     </div>
 
   </div>
-
 </section>

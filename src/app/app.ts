@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './components/navbar/navbar';
 import { Hero } from './components/hero/hero';
@@ -12,6 +13,8 @@ import { Portfolio } from './components/portfolio/portfolio';
 import { About } from './components/about/about';
 import { Testimonial } from './components/testimonial/testimonial';
 import { FloatingActions } from './components/floating-actions/floating-actions';
+import { Partners } from './components/partners/partners';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -27,19 +30,29 @@ import { FloatingActions } from './components/floating-actions/floating-actions'
     Portfolio,
     About,
     Testimonial,
-    FloatingActions
+    FloatingActions,
+    Partners
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss']
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('TUBUNTU');
 
-  // ngOnInit() {
-  //   AOS.init({
-  //     duration: 1000,
-  //     once: true,
-  //   });
-  // }
+  constructor(
+    @Inject(PLATFORM_ID)
+    private platformId: Object
+  ) {}
+
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+      });
+    }
+  }
 }
   

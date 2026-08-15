@@ -23,9 +23,9 @@
 
     <div class="row g-4">
 
-      @for(service of services; track service.title){
+      @for(service of services; track service.title; let i = $index){
 
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-6 col-md-6" data-aos="fade-up" [attr.data-aos-delay]="i * 100">
 
         <div class="service-card">
 
