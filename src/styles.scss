@@ -28,3 +28,31 @@ h1,h2,h3,h4,h5 {
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 767px) {
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .hero-description,
+  .about-text,
+  .section-header p,
+  .service-card p,
+  .process-card p,
+  .advantage-card p,
+  .banner-content p,
+  .testimonial-message,
+  .cta-content p,
+  .contact-content p,
+  .footer-brand p,
+  .footer-column p {
+    text-align: justify;
+    text-wrap: pretty;
+  }
+}

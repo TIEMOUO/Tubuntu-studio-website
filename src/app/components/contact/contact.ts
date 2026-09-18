@@ -12,7 +12,7 @@ export class Contact {
   whatsappNumber = '237699099784'; 
 
   contactInfo = {
-    email: 'contact@tubsstudio.com',
+    email: 'tiwomaxime@gmail.com',
     phone: '237699099784',
     location: 'Douala, Cameroun'
   };

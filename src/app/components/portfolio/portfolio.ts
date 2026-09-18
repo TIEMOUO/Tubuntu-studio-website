@@ -24,7 +24,7 @@ interface SubPortfolio {
 export class Portfolio {
   
   // Lien vers le portfolio principal sur Google Drive
-  mainDriveUrl = 'https://zesubtilizer.pixieset.com/vitrinestudio/';
+  mainDriveUrl = 'https://tubuntustudio71.pixieset.com/tubuntustudiophotoscollection/';
 
   // Données des statistiques
   stats: Stat[] = [
@@ -40,7 +40,7 @@ export class Portfolio {
     },
     {
       icon: 'fas fa-star',
-      value: '+10',
+      value: '+5',
       label: "Années d'expérience"
     }
   ];
@@ -51,7 +51,7 @@ export class Portfolio {
       icon: 'fas fa-camera',
       title: 'Studio Portfolio',
       subtitle: 'Voir toutes nos photos',
-      driveUrl: 'https://zesubtilizer.pixieset.com/vitrinestudio/'
+      driveUrl: 'https://tubuntustudio71.pixieset.com/tubuntustudiophotoscollection/'
     },
     {
       icon: 'fas fa-film',

@@ -1,23 +1,23 @@
-<!-- WhatsApp -->
+@if (isBrowser) {
+  <!-- WhatsApp -->
+  <a
+    class="whatsapp-btn"
+    href="https://wa.me/237699099784"
+    target="_blank"
+    aria-label="WhatsApp">
 
-<a
-  class="whatsapp-btn"
-  href="https://wa.me/237699099784"
-  target="_blank"
-  aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
 
-  <i class="fab fa-whatsapp"></i>
+  </a>
 
-</a>
+  <!-- Scroll To Top -->
+  <button
+    class="scroll-top-btn"
+    [class.show]="isVisible"
+    (click)="scrollToTop()"
+    aria-label="Retour en haut">
 
-<!-- Scroll To Top -->
+    <i class="fas fa-arrow-up"></i>
 
-<button
-  class="scroll-top-btn"
-  [class.show]="isVisible"
-  (click)="scrollToTop()"
-  aria-label="Retour en haut">
-
-  <i class="fas fa-arrow-up"></i>
-
-</button>
+  </button>
+}

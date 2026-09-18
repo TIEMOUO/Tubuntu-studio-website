@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -16,17 +17,33 @@ export class Navbar implements OnInit {
     { label: 'Services', href: '#services' },
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'Processus', href: '#process' },
-    {label: 'Temoignages', href: '#testimonials'},
     { label: 'Contact', href: '#contact' }
-    
+
   ];
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
+    this.updateScrollState();
   }
 
   @HostListener('window:scroll')
   onScroll(): void {
-    this.isScrolled = window.scrollY > 60;
+    this.updateScrollState();
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    this.updateScrollState();
+  }
+
+  private updateScrollState(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      this.isScrolled = false;
+      return;
+    }
+
+    this.isScrolled = window.innerWidth <= 767 || window.scrollY > 60;
   }
 
   toggleMenu(): void {
