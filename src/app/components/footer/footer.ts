@@ -19,10 +19,9 @@ export class Footer {
   };
 
   social: SocialItem[] = [
-    { label: 'Facebook', url: 'https://facebook.com', icon: 'fa-brands fa-facebook-f' },
-    { label: 'Instagram', url: 'https://instagram.com', icon: 'fa-brands fa-instagram' },
-    { label: 'LinkedIn', url: 'https://linkedin.com', icon: 'fa-brands fa-linkedin-in' },
-    { label: 'Twitter / X', url: 'https://x.com', icon: 'fa-brands fa-x-twitter' },
-    { label: 'YouTube', url: 'https://youtube.com', icon: 'fa-brands fa-youtube' }
-  ];
+    { label: 'Facebook', url: 'https://www.facebook.com/share/18mRzDRVFr/?mibextid=wwXIfr', icon: 'fa-brands fa-facebook-f' },
+    { label: 'TikTok', url: 'https://www.tiktok.com/@tubuntustudio4?_r=1&_t=ZS-992opukbnz6 ', icon: 'fa-brands fa-tiktok' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/company/tubuntu-group-sarl/', icon: 'fa-brands fa-linkedin-in' },
+    { label: 'Instagram', url: 'https://www.instagram.com/tubuntu_237?igsi=MTdheHpvMjNubTU3OA%3D%3D&utm_source=qr', icon: 'fa-brands fa-instagram' },
+  ]
 }
